@@ -19,14 +19,173 @@
 <div align="center">
 <a href="https://www.producthunt.com/products/hmpl-js?embed=true&amp;utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_campaign=badge-hmpl-3" target="_blank" rel="noopener noreferrer"><img alt="HMPL - Lightweight server-oriented template language for JavaScript | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1053802&amp;theme=neutral&amp;period=daily&amp;t=1766997353384"></a>
 </div>
+<h3 align="center">CS 2204 - Group 1</h3>
 
-## Introduction
+<div align="center">
+
+| Role | Members |
+| :---: | :---: |
+| **Project Manager / Lead Developer** | Nikki C. Limboc |
+| **GUI Developer** | Rex Anthony C. Castillano |
+
+</div>
+<br/>
+
+
+## 📖 About the Project
 
 <div align="justify">
 
 This project presents a Medicine Inventory System designed to efficiently manage and organize medical supplies. It is developed using C# for the backend logic, with SQL serving as the database for secure and structured data storage. The system also features a user-friendly interface built with HTML and CSS to ensure ease of use and accessibility.
 
 The main goal of this system is to help small pharmacies, non-government organizations (NGOs), barangay health centers, and volunteer groups improve the way they track and manage medicines. By providing an organized and reliable inventory process, the system aims to reduce errors, prevent stock shortages, and support better decision-making in distributing medical supplies to communities in need.
+
+<br/>
+
+## ✨ Key Features
+* **Role-Based Access Control (RBAC):** Secure, distinct user levels to ensure data integrity and proper system management.
+  * **👑 Admin Privileges:** Full system oversight, user account management (add/edit/remove staff credentials), and master database overrides.
+  * **🧑‍💻 Staff Access:** Streamlined day-to-day operations focused on stock updates, searching, and logging transactions without exposing sensitive system settings.
+* **Inventory Tracking:** Easily add, update, and delete medicine batches from the database.
+* **Modern Interface:** A sleek, responsive dashboard styled with a custom dark-themed UI.
+* **Real-time Search & Filtering:** Quickly locate specific medicines, expiration dates, or low-stock items.
+* **Secure Database Integration:** Reliable data storage and retrieval using SQL.
+  
+
+## 📂 Project Structure
+<div align="justify">
+The project is organized into frontend, backend, and database components to ensure modularity and ease of development.
+
+
+
+
+<br/>
+<br/>
+
+<h2>📂 Project Structure</h2>
+
+<p>
+The <strong>SuppliMed Medicine Inventory System</strong> is organized into frontend, backend, and database components. 
+This structure ensures modular development, maintainability, and clear separation of responsibilities.
+</p>
+
+<hr>
+
+<h3>📁 Root Directory</h3>
+<p>
+Contains all main files including HTML pages, stylesheets, scripts, backend logic, and database configuration.
+</p>
+
+<pre>
+SuppliMed/
+│── dashboard.html
+│── inventory.html
+│── styles.css
+│── inventory.js
+│── modal.js
+│── backend/
+│── database.sql
+</pre>
+
+<hr>
+
+<h3>📄 Frontend Files</h3>
+
+<ul>
+  <li>
+    <strong>dashboard.html</strong><br>
+    Main interface of the system. Displays overview data and navigation.
+  </li>
+
+  <li>
+    <strong>inventory.html</strong><br>
+    Handles the inventory table and CRUD interface (Add, Update, Delete).
+  </li>
+
+  <li>
+    <strong>styles.css</strong><br>
+    Controls layout, colors, typography, and overall UI design.
+  </li>
+
+  <li>
+    <strong>inventory.js</strong><br>
+    Manages frontend logic such as:
+    <ul>
+      <li>Loading inventory data</li>
+      <li>Handling button actions</li>
+      <li>Updating UI dynamically</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong>modal.js</strong><br>
+    Handles modal pop-ups for user input and editing records.
+  </li>
+</ul>
+
+<hr>
+
+<h3>🖥️ Backend (C#)</h3>
+
+<ul>
+  <li>
+    <strong>backend/</strong><br>
+    Contains server-side logic responsible for:
+    <ul>
+      <li>Database connection</li>
+      <li>CRUD operations</li>
+      <li>Data processing</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3>🗄️ Database</h3>
+
+<ul>
+  <li>
+    <strong>database.sql</strong><br>
+    Defines the database schema including tables for:
+    <ul>
+      <li>Medicine name</li>
+      <li>Quantity</li>
+      <li>Expiration date</li>
+      <li>Other inventory details</li>
+    </ul>
+  </li>
+</ul>
+
+<hr>
+
+<h3>🔄 System Flow</h3>
+
+<ol>
+  <li>User interacts with the interface (HTML/CSS)</li>
+  <li>JavaScript captures user actions</li>
+  <li>Requests are sent to the C# backend</li>
+  <li>Backend communicates with SQL database</li>
+  <li>Updated data is returned and displayed in the UI</li>
+</ol>
+
+<hr>
+
+<h3>📌 Notes</h3>
+
+<ul>
+  <li>Follows a simple <strong>CRUD architecture</strong></li>
+  <li>Designed for small-scale healthcare inventory management</li>
+  <li>Modular structure allows easy expansion and maintenance</li>
+</ul>
+
+<br/>
+<br/>
+
+
+
+<div align="center">
+
+
 ```html
 <div>
   {{#request src="/api/my-component.html"}}
