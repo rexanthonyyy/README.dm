@@ -15,9 +15,6 @@
 </div>
 
 <br/>
-
-<div align="center">
-<a href="https://www.producthunt.com/products/hmpl-js?embed=true&amp;utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_campaign=badge-hmpl-3" target="_blank" rel="noopener noreferrer"><img alt="HMPL - Lightweight server-oriented template language for JavaScript | Product Hunt" width="250" height="54" src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=1053802&amp;theme=neutral&amp;period=daily&amp;t=1766997353384"></a>
 </div>
 <h3 align="center">CS 2204 - Group 1</h3>
 
@@ -50,136 +47,113 @@ The main goal of this system is to help small pharmacies, non-government organiz
 * **Modern Interface:** A sleek, responsive dashboard styled with a custom dark-themed UI.
 * **Real-time Search & Filtering:** Quickly locate specific medicines, expiration dates, or low-stock items.
 * **Secure Database Integration:** Reliable data storage and retrieval using SQL.
-  
 
-## 📂 Project Structure
+<br/>
+
+## 📂 Project Structure 
+
 <div align="justify">
-The project is organized into frontend, backend, and database components to ensure modularity and ease of development.
 
-
-
-
-<br/>
-<br/>
-
-<h2>📂 Project Structure</h2>
-
-<p>
-The <strong>SuppliMed Medicine Inventory System</strong> is organized into frontend, backend, and database components. 
-This structure ensures modular development, maintainability, and clear separation of responsibilities.
-</p>
-
-<hr>
-
-<h3>📁 Root Directory</h3>
-<p>
-Contains all main files including HTML pages, stylesheets, scripts, backend logic, and database configuration.
+The <strong>SuppliMed Medicine Inventory System</strong> is built using an ASP.NET (C#) backend  with a structured <code>wwwroot</code> directory for frontend assets such as HTML, CSS, JavaScript, and media files. Below is a diagram-like structure of the other primary helper classes defined inside the file:
 </p>
 
 <pre>
-SuppliMed/
-│── dashboard.html
-│── inventory.html
-│── styles.css
-│── inventory.js
-│── modal.js
-│── backend/
-│── database.sql
+SUPPLIMED/
+│
+├── 📁 SuppliMed/
+│   └── 📁 SuppliMed.Api/
+│       │
+│       ├── 📁 wwwroot/
+│       │   ├── 📁 css/
+│       │   │   ├── audit.css
+│       │   │   ├── dashboard.css
+│       │   │   ├── inventory.css
+│       │   │   ├── login.css
+│       │   │   ├── mainLayout.css
+│       │   │   └── modals.css
+│       │   │
+│       │   ├── 📁 js/
+│       │   │   ├── action.js
+│       │   │   ├── app.js
+│       │   │   ├── audit.js
+│       │   │   ├── auth.js
+│       │   │   ├── dashboard.js
+│       │   │   ├── inventory.js
+│       │   │   └── modals.js
+│       │   │
+│       │   ├── 📁 icons/
+│       │   │   ├── 1-default.svg
+│       │   │   ├── 2-default.svg
+│       │   │   ├── 3-default.svg
+│       │   │   └── 5-default.svg
+│       │   │
+│       │   ├── background.png
+│       │   ├── dashboard.html
+│       │   └── index.html
+│       │
+│       └── (C# backend files)
+│
+└── README.md
 </pre>
 
-<hr>
-
-<h3>📄 Frontend Files</h3>
-
-<ul>
-  <li>
-    <strong>dashboard.html</strong><br>
-    Main interface of the system. Displays overview data and navigation.
-  </li>
-
-  <li>
-    <strong>inventory.html</strong><br>
-    Handles the inventory table and CRUD interface (Add, Update, Delete).
-  </li>
-
-  <li>
-    <strong>styles.css</strong><br>
-    Controls layout, colors, typography, and overall UI design.
-  </li>
-
-  <li>
-    <strong>inventory.js</strong><br>
-    Manages frontend logic such as:
+### `Frontend` 
+<div align="justify">
+</p>
+The frontend is located in the wwwroot directory, which contains all client-side resources including styles, scripts, media, and HTML pages that power the user interface of SuppliMed. 
+</p>
+    <strong> CSS Stylesheets</strong>
+<div align="justify">
+</p>
     <ul>
-      <li>Loading inventory data</li>
-      <li>Handling button actions</li>
-      <li>Updating UI dynamically</li>
-    </ul>
-  </li>
-
-  <li>
-    <strong>modal.js</strong><br>
-    Handles modal pop-ups for user input and editing records.
-  </li>
-</ul>
-
-<hr>
-
-<h3>🖥️ Backend (C#)</h3>
-
-<ul>
-  <li>
-    <strong>backend/</strong><br>
-    Contains server-side logic responsible for:
+    <p> Contains all styling resources responsible for the visual presentation of the system. 
+    These stylesheets define the layout, colors, typography, spacing, and responsiveness 
+    of the user interface to ensure a consistent and user-friendly design. </p>
     <ul>
-      <li>Database connection</li>
-      <li>CRUD operations</li>
-      <li>Data processing</li>
-    </ul>
-  </li>
-</ul>
+      <li><code>dashboard.css</code> – Dashboard layout and components</li>
+      <li><code>inventory.css</code> – Inventory table and controls</li>
+      <li><code>login.css</code> – Login page styling</li>
+      <li><code>audit.css</code> – Audit logs interface</li>
+      <li><code>mainLayout.css</code> – Global layout (navbar, structure)</li>
+      <li><code>modals.css</code> – Modal UI components</li>
+</div>
 
-<hr>
-
-<h3>🗄️ Database</h3>
-
-<ul>
-  <li>
-    <strong>database.sql</strong><br>
-    Defines the database schema including tables for:
+</p>
+    <strong> JavaScript Modules </strong>
+ <div align="justify">
+</p>
+        <ul>
+    <p>Contains all client-side scripts responsible for handling system functionality, 
+    interactivity, and communication with the backend. These modules manage user actions, 
+    dynamic content updates, and API interactions.</p>
     <ul>
-      <li>Medicine name</li>
-      <li>Quantity</li>
-      <li>Expiration date</li>
-      <li>Other inventory details</li>
-    </ul>
-  </li>
-</ul>
+      <li><code>app.js</code> – Core application logic</li>
+      <li><code>auth.js</code> – User authentication handling</li>
+      <li><code>inventory.js</code> – Inventory CRUD operations</li>
+      <li><code>dashboard.js</code> – Dashboard data updates</li>
+      <li><code>audit.js</code> – Audit trail tracking</li>
+      <li><code>action.js</code> – General UI actions/events</li>
+      <li><code>modals.js</code> – Modal interactions and forms</li>
+</div>
 
-<hr>
+</p>
+    <strong> HTML Pages </strong>
+ <div align="justify">
+</p>
+        <ul>
+        <p> Contains the core user interface pages of the system, serving as the structural foundation 
+    of the application. These pages define the layout and integrate styles (CSS) and functionality 
+    (JavaScript) to deliver an interactive user experience.</p>
+                
+ <ul>
+     <li>
+      <code>index.html</code> – Entry point of the system, typically used for login or initial access.
+    </li>
+    <li>
+      <code>dashboard.html</code> – Main interface displaying system overview, navigation, and key data.
+    </li>
+  </ul>
 
-<h3>🔄 System Flow</h3>
-
-<ol>
-  <li>User interacts with the interface (HTML/CSS)</li>
-  <li>JavaScript captures user actions</li>
-  <li>Requests are sent to the C# backend</li>
-  <li>Backend communicates with SQL database</li>
-  <li>Updated data is returned and displayed in the UI</li>
-</ol>
-
-<hr>
-
-<h3>📌 Notes</h3>
-
-<ul>
-  <li>Follows a simple <strong>CRUD architecture</strong></li>
-  <li>Designed for small-scale healthcare inventory management</li>
-  <li>Modular structure allows easy expansion and maintenance</li>
-</ul>
-
-<br/>
-<br/>
+</p>
 
 
 
